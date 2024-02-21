@@ -1,0 +1,18 @@
+Inputkan dta mahasiswa
+soal no 1(Create/save)
+-Nama Ucogg
+-Jurusan : Sastra Mesin
+-Mata Kuliah : -Statistik I,2019-Ganjil
+	       -Aljabar,2019-Ganjil
+	       -Aljabar,2020-Ganjil
+	       -Statistik II,2019-Genap
+               -Kalkulus I,2019-Genap
+
+soal 2 update(buat kalkulus I menjadi Kalkulus II)
+soal 3 read(find all seperti biasa guys,)
+soal 4 delete(Hapus statistik 2 karna terlalu berat biar dilan aja)
+
+Jangan lupa tiap penamaan menggunakan bahasa inggris,dan output boleh bahasa indonesia dan ss find all sebelum 
+dan sesudah update
+
+database kita kasi guys karna kita kumpulan malaikat,minimal cilok la goceng.
