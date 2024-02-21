@@ -47,15 +47,26 @@ public class EnrollRepositoryImpl implements EnrollRepository {
     }
 
     @Override
-    public void update(Integer id, DetailEnrollRequest request) {
-
+    public void update(EnrollDetail enrollDetail) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.merge(enrollDetail);
+        transaction.commit();
     }
 
     @Override
-    public void delete(Integer id) {
+    public void deleteByEnrollment(Integer id) {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.remove(entityManager.find(Enroll.class,id));
+        transaction.commit();
+    }
+
+    @Override
+    public void deleteEnrollmentDetail(Integer id) {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.remove(entityManager.find(EnrollDetail.class,id));
         transaction.commit();
     }
 }

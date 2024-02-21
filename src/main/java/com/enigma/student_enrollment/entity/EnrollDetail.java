@@ -9,7 +9,7 @@ public class EnrollDetail {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "enroll_detail_seq")
     @SequenceGenerator(name = "enroll_detail_seq",sequenceName = "enroll_detail_id_seq",allocationSize = 1)
     private Integer id;
-    @ManyToOne(cascade = {CascadeType.PERSIST})
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "enroll_id")
     private Enroll enroll;
     @ManyToOne(cascade = {CascadeType.PERSIST})
